@@ -1,0 +1,120 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #010b16, #4ca1af);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f4f4f4;
+}
+
+.container {
+  background: #1f2d3a;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+/* Task Input */
+.task-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-inputs input,
+.task-inputs select,
+.task-inputs button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.task-inputs input,
+.task-inputs select {
+  flex: 1;
+  min-width: 150px;
+}
+
+.task-inputs button {
+  background: #27ae60;
+  color: white;
+  font-weight: bold;
+}
+
+.task-inputs button:hover {
+  background: #1e8449;
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+}
+
+#task-list li {
+  background: #34495e;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+#task-list li.done {
+  background: #2ecc71;
+  text-decoration: line-through;
+}
+
+#task-list li small {
+  font-size: 0.85rem;
+  color: #bdc3c7;
+}
+
+#task-list button {
+  background: #2980b9;
+  margin-left: 5px;
+}
+
+#task-list button:hover {
+  background: #1c5980;
+}
