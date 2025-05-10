@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkStation Pro - To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WorkStation Pro - To-Do List</h1>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="task-inputs">
+      <input type="text" id="task-input" placeholder="Enter your task..." />
+      <select id="category-select">
+        <option>Business</option>
+        <option>Personal</option>
+        <option>Urgent</option>
+      </select>
+      <input type="date" id="due-date-input" />
+      <button id="add-task-btn" class="add-btn">Add Task</button>
+    </div>
+
+    <div class="task-list-container">
+      <select id="task-filter">
+        <option value="all">All Tasks</option>
+        <option value="Business">Business</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+
+      <ul id="task-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Redirect to login if not logged in
+    if (!localStorage.getItem("loggedIn")) {
+      window.location.href = "login.html";
+    }
+  </script>
+  
+</body>
+</html>
